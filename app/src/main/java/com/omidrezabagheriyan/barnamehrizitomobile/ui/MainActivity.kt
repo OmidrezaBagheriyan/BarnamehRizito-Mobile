@@ -5,7 +5,9 @@ import android.os.Bundle
 import com.omidrezabagheriyan.barnamehrizitomobile.R
 import com.omidrezabagheriyan.barnamehrizitomobile.databinding.ActivityMainBinding
 import com.omidrezabagheriyan.barnamehrizitomobile.utils.viewbinding.viewBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val binding by viewBinding(ActivityMainBinding::inflate)
 

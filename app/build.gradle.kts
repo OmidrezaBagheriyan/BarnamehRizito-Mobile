@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -41,6 +43,11 @@ android {
 
 dependencies {
 
+    // Hilt dependency
+    val hiltVersion = "2.51.1"
+    implementation("com.google.dagger:hilt-android:$hiltVersion")
+    kapt("com.google.dagger:hilt-compiler:$hiltVersion")
+
     // Base dependencies
     val coreVersion = "1.12.0"
     implementation("androidx.core:core-ktx:$coreVersion")
@@ -56,4 +63,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:$extJunitVersion")
     val espressoVersion = "3.5.1"
     androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion")
+}
+
+kapt {
+    correctErrorTypes = true
 }
