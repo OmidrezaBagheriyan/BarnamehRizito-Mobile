@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
+    id("androidx.navigation.safeargs")
     id("com.google.dagger.hilt.android")
 }
 
@@ -42,6 +43,10 @@ android {
 }
 
 dependencies {
+    // Navigation component dependency
+    val navVersion = "2.7.7"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
     // Hilt dependency
     val hiltVersion = "2.51.1"
