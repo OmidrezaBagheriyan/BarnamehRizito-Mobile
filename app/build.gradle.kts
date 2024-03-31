@@ -47,6 +47,39 @@ dependencies {
     val dataStoreVersion = "1.0.0"
     implementation("androidx.datastore:datastore-preferences:$dataStoreVersion")
 
+    //Activity dependency + Fragment dependency
+    val activityVersion = "1.8.2"
+    implementation("androidx.activity:activity-ktx:$activityVersion")
+    val fragmentVersion = "1.6.2"
+    implementation("androidx.fragment:fragment-ktx:$fragmentVersion")
+    val legacyVersion = "1.0.0"
+    implementation("androidx.legacy:legacy-support-v4:$legacyVersion")
+    val recyclerviewVersion = "1.3.2"
+    implementation("androidx.recyclerview:recyclerview:$recyclerviewVersion")
+
+    // Lifecycle dependency
+    val lifecycleVersion = "2.7.0"
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
+
+    // Kotlin-Coroutines dependency
+    val coroutinesVersion = "1.7.1"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+
+    //Lottie components
+    val lottieVersion = "5.2.0"
+    implementation("com.airbnb.android:lottie:$lottieVersion")
+
+    // Room dependency
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+    androidTestImplementation("androidx.room:room-testing:$roomVersion")
+
     // Navigation dependency
     val navVersion = "2.7.7"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
