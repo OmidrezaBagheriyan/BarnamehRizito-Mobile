@@ -33,15 +33,27 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    // Base dependencies
+    val coreVersion = "1.12.0"
+    implementation("androidx.core:core-ktx:$coreVersion")
+    val appCompatVersion = "1.6.1"
+    implementation("androidx.appcompat:appcompat:$appCompatVersion")
+    val materialVersion = "1.11.0"
+    implementation("com.google.android.material:material:$materialVersion")
+    val constraintLayoutVersion = "2.1.4"
+    implementation("androidx.constraintlayout:constraintlayout:$constraintLayoutVersion")
+    val junitVersion = "4.13.2"
+    testImplementation("junit:junit:$junitVersion")
+    val extJunitVersion = "1.1.5"
+    androidTestImplementation("androidx.test.ext:junit:$extJunitVersion")
+    val espressoVersion = "3.5.1"
+    androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion")
 }
