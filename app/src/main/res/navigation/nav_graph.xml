@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/tasksFragment">
+    app:startDestination="@id/addFragment">
 
     <fragment
         android:id="@+id/tasksFragment"
@@ -14,7 +14,11 @@
         android:id="@+id/addFragment"
         android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.add.AddFragment"
         android:label="AddFragment"
-        tools:layout="@layout/fragment_add" />
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.details.DetailsFragment"

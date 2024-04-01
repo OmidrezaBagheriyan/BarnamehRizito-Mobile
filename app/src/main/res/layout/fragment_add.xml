@@ -2,15 +2,65 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:padding="8dp"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAddTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Main"
-        android:textSize="32sp"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietAddTitle"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_add_title" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:layout_marginStart="12dp"
+        android:id="@+id/cbAddIsDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_add_is_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilAddTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAddDescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/cbAddIsDone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietAddDescription"
+            android:layout_width="match_parent"
+            android:gravity="top"
+            android:layout_height="match_parent"
+            android:hint="@string/text_add_description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/text_add_apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_save" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
