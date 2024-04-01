@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/tasksFragment">
 
     <fragment
-        tools:layout="@layout/fragment_task"
-        android:id="@+id/taskFragment"
-        android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.task.TaskFragment"
-        android:label="TaskFragment" />
+        android:id="@+id/tasksFragment"
+        android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.tasks.TasksFragment"
+        android:label="TasksFragment"
+        tools:layout="@layout/fragment_tasks" />
     <fragment
-        tools:layout="@layout/fragment_main"
-        android:id="@+id/mainFragment"
-        android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.main.MainFragment"
-        android:label="MainFragment" />
+        android:id="@+id/addFragment"
+        android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.add.AddFragment"
+        android:label="AddFragment"
+        tools:layout="@layout/fragment_add" />
     <fragment
-        tools:layout="@layout/fragment_details"
         android:id="@+id/detailsFragment"
         android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.details.DetailsFragment"
-        android:label="DetailsFragment" />
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_details" />
 </navigation>
