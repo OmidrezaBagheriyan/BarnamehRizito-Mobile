@@ -3,13 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/addFragment">
+    app:startDestination="@id/tasksFragment">
 
     <fragment
         android:id="@+id/tasksFragment"
         android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.tasks.TasksFragment"
         android:label="TasksFragment"
-        tools:layout="@layout/fragment_tasks" />
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_tasksFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addFragment"
         android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.add.AddFragment"
@@ -23,5 +30,9 @@
         android:id="@+id/detailsFragment"
         android:name="com.omidrezabagheriyan.barnamehrizitomobile.ui.details.DetailsFragment"
         android:label="DetailsFragment"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>
