@@ -45,7 +45,7 @@ class TasksFragment : Fragment(R.layout.fragment_tasks) {
     }
 
     private fun navigateToDetailsTask(task: Task) {
-        navController.navigate(TasksFragmentDirections.actionTasksFragmentToDetailsFragment(task.id))
+        navController.navigate(TasksFragmentDirections.actionTasksFragmentToDetailsFragment(task))
     }
 
     private fun setupRVTasks() {

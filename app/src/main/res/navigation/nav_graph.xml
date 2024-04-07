@@ -32,7 +32,10 @@
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_details" >
         <argument
-            android:name="id"
-            app:argType="integer" />
+            android:name="task"
+            app:argType="com.omidrezabagheriyan.barnamehrizitomobile.domain.models.Task" />
+        <action
+            android:id="@+id/action_detailsFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
     </fragment>
 </navigation>
