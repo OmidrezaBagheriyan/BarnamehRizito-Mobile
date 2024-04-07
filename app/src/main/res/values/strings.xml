@@ -4,12 +4,16 @@
     <string name="app_name">BarnamehRizito</string>
 
     <!-- toast texts -->
+    <string name="text_toast_task_loaded">Your task status could not be loaded</string>
     <string name="text_toast_title_empty">Title is empty</string>
     <string name="text_toast_okey">OK</string>
 
-    <!-- add fragment texts -->
-    <string name="text_add_title">Title</string>
-    <string name="text_add_is_done">Is done</string>
-    <string name="text_add_description">Description</string>
-    <string name="text_add_apply">Apply</string>
+    <!-- add/edit fragment texts -->
+    <string name="text_tasks_apply">Apply</string>
+
+    <!-- add/edit fragment texts -->
+    <string name="text_add_edit_title">Title</string>
+    <string name="text_add_edit_is_done">Is done</string>
+    <string name="text_add_edit_description">Description</string>
+    <string name="text_add_edit_apply">Apply</string>
 </resources>

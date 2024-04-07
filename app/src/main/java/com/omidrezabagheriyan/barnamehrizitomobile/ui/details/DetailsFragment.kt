@@ -41,6 +41,9 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         binding.ivDetailsDelete.setOnClickListener {
             manageDeleteTask(navArgs.task)
         }
+        binding.ivDetailsEdit.setOnClickListener {
+            manageEditTask(navArgs.task)
+        }
     }
 
     private fun bindDataToUI(id: Int) {
@@ -61,12 +64,12 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         navController.navigate(DetailsFragmentDirections.actionDetailsFragmentToTasksFragment())
     }
 
-    /*private fun navigationToEdit(task: Task){
-        navController.navigate(DetailsFragmentDirections.actionDetailFragmentToUpdateFragment(task))
-    }*/
+    private fun navigationToEdit(task: Task){
+        navController.navigate(DetailsFragmentDirections.actionDetailsFragmentToEditFragment(task))
+    }
 
-    private fun manageUpdateTask(task: Task){
-        //navigationToEdit(task)
+    private fun manageEditTask(task: Task){
+        navigationToEdit(task)
     }
     private fun manageDeleteTask(task: Task) {
         detailsViewModel.deleteTask(task)
