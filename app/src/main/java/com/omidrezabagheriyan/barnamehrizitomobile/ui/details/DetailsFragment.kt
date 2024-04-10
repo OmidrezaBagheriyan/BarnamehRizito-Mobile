@@ -1,7 +1,10 @@
 package com.omidrezabagheriyan.barnamehrizitomobile.ui.details
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -12,6 +15,7 @@ import androidx.navigation.fragment.navArgs
 import com.omidrezabagheriyan.barnamehrizitomobile.R
 import com.omidrezabagheriyan.barnamehrizitomobile.databinding.FragmentDetailsBinding
 import com.omidrezabagheriyan.barnamehrizitomobile.domain.models.Task
+import com.omidrezabagheriyan.barnamehrizitomobile.domain.models.TaskStatus
 import com.omidrezabagheriyan.barnamehrizitomobile.utils.viewbinding.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -52,7 +56,13 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.CREATED) {
                 detailsViewModel.details.collect { data ->
                     binding.mtvDetailsTitle.text = data.title
-                    binding.mtvDetailsStatus.text = data.taskStatus.name
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        val status = if (task.taskStatus == TaskStatus.TASK)
+                            ContextCompat.getString(requireContext(), R.string.text_task_status)
+                        else
+                            ContextCompat.getString(requireContext(), R.string.text_done_status)
+                        binding.mtvDetailsStatus.text = status
+                    },100)
                     binding.mtvDetailsDescription.text = data.description
                     task = data
                 }
