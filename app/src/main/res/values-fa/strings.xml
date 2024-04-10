@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">برنامه ریزیتو</string>
+    <string name="text_toast_task_loaded">وضعیت وظیفه شما بارگیری نشد</string>
+    <string name="text_toast_title_empty">عنوان خالی میباشد</string>
+    <string name="text_toast_okey">تایید</string>
+    <string name="text_tasks_apply">ذخیره</string>
+    <string name="text_add_edit_title">عنوان</string>
+    <string name="text_add_edit_is_done">به اتمام رسیده</string>
+    <string name="text_add_edit_description">توضیحات</string>
+    <string name="text_add_edit_apply">ویرایش</string>
+</resources>
