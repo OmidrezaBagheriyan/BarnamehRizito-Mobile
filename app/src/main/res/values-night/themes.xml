@@ -1,7 +1,44 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.BarnamehRizitoMobile" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+
+        <item name="android:fontFamily">@font/vazirmatn_regular</item>
+    </style>
+
+    <style name="TextViewBlackCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_black</item>
+    </style>
+
+    <style name="TextViewBoldCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_bold</item>
+    </style>
+
+    <style name="TextViewExtraBoldCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_extrabold</item>
+    </style>
+
+    <style name="TextViewExtraLightCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_extralight</item>
+    </style>
+
+    <style name="TextViewLightCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_light</item>
+    </style>
+
+    <style name="TextViewMediumCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_medium</item>
+    </style>
+
+    <style name="TextViewRegularCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_regular</item>
+    </style>
+
+    <style name="TextViewSemiBoldCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_semibold</item>
+    </style>
+
+    <style name="TextViewThinCustom" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/vazirmatn_thin</item>
     </style>
 </resources>
