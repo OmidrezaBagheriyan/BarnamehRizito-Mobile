@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Application name texts-->
     <string name="app_name">برنامه ریزیتو</string>
+
+    <!-- toast texts -->
     <string name="text_toast_task_loaded">وضعیت وظیفه شما بارگیری نشد</string>
     <string name="text_toast_title_empty">عنوان خالی میباشد</string>
     <string name="text_toast_okey">تایید</string>
+
+    <!-- add/edit fragment texts -->
     <string name="text_tasks_apply">ذخیره</string>
+
+    <!-- add/edit fragment texts -->
     <string name="text_add_edit_title">عنوان</string>
     <string name="text_add_edit_is_done">به اتمام رسیده</string>
     <string name="text_add_edit_description">توضیحات</string>
     <string name="text_add_edit_apply">ویرایش</string>
+
+    <!-- status task texts -->
+    <string name="text_task_status">کار</string>
+    <string name="text_done_status">اتمام رسیده</string>
 </resources>

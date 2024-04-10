@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Application name texts-->
     <string name="app_name">BarnamehRizito</string>
 
@@ -16,4 +15,8 @@
     <string name="text_add_edit_is_done">Is done</string>
     <string name="text_add_edit_description">Description</string>
     <string name="text_add_edit_apply">Apply</string>
+
+    <!-- status task texts -->
+    <string name="text_task_status">Task</string>
+    <string name="text_done_status">Done</string>
 </resources>

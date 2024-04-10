@@ -51,7 +51,7 @@ class TasksFragment : Fragment(R.layout.fragment_tasks) {
     private fun setupRVTasks() {
         tasksViewModel.showTasks(TaskStatus.TASK)
 
-        val tasksAdapter = TaskAdapter { task ->
+        val tasksAdapter = TaskAdapter(requireContext()) { task ->
             navigateToDetailsTask(task)
         }
 
@@ -69,7 +69,7 @@ class TasksFragment : Fragment(R.layout.fragment_tasks) {
     private fun setupRVDones() {
         tasksViewModel.showDones(TaskStatus.DONE)
 
-        val donesAdapter = TaskAdapter { task ->
+        val donesAdapter = TaskAdapter(requireContext()) { task ->
             navigateToDetailsTask(task)
         }
 
